@@ -47,6 +47,17 @@ TODO: Het schip moet in evenwicht zijn: het volledige gewicht van de containers 
 
 ======================
 
+How to run / debug / test
+> yarn
+
 Goto VSCode debugger.
 Open Javascript debugger window
-Run: yarn debug:watch  
+> yarn debug:watch
+
+or 
+> yarn debug:watch
+
+and attach debugger to running process
+
+> yarn test
+
