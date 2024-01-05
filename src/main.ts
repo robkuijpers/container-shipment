@@ -23,6 +23,7 @@ export class Main {
         // If we want to take as many containers as possible sort by weight first.
         const shipment = new Shipment();
 
+
         // Cooled containers 
         // shipment.addCooledContainer(new CooledContainer("CO000", 30_000));
         // shipment.addCooledContainer(new CooledContainer("CO001", 30_000));

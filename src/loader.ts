@@ -47,9 +47,16 @@ export class Loader {
             console.log('After processing all containers, load is to low.');
         }
 
+        const wl = this.getWeightForLeftSide();
+        const wr = this.getWeightForRightSide();
         console.log(`Total weight      : ${new Intl.NumberFormat('nl-NL').format(this.getTotalWeight())}`);
-        console.log(`Total weight left : ${new Intl.NumberFormat('nl-NL').format(this.getWeightForLeftSide())}`);
-        console.log(`Total weight right: ${new Intl.NumberFormat('nl-NL').format(this.getWeightForRightSide())}\n\n`);
+        console.log(`Total weight left : ${new Intl.NumberFormat('nl-NL').format(wl)}`);
+        console.log(`Total weight right: ${new Intl.NumberFormat('nl-NL').format(wr)}`);
+
+        const diff: number = Math.abs(this.getWeightForLeftSide() - this.getWeightForRightSide());
+        const perc = diff / Math.max(this.getWeightForLeftSide(), this.getWeightForRightSide()) * 100;
+        console.log(`Weight difference : ${new Intl.NumberFormat('nl-NL').format(perc)} %\n\n`);
+
 
         return this.plan;
     }
